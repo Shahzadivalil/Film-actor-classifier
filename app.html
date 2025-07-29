@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film Actor Classifier</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./dropzone.min.css">
+    <link rel="stylesheet" href="./app.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light justify-content-center">
+        <a class="navbar-brand" href="#">Film Actor Classifier</a>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col card-wrapper" data-actor="Dulquer Salmaan">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/Dulquer_Salmaan.jpg" alt="Dulquer Salmaan">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">Dulquer Salmaan</h4>
+                    </div>
+                </div>
+            </div>            
+
+            <div class="col card-wrapper" data-actor="Fahad Faasil">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/Fahadh_Faasil.jpg" alt="Fahad Faasil">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">Fahad Faasil</h4>
+                    </div>
+                </div>
+            </div>            
+
+            <div class="col card-wrapper" data-actor="Mohanlal">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/Mohanlal.jpeg" alt="Mohanlal">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">Mohanlal</h4>
+                    </div>
+                </div>
+            </div>          
+
+            <div class="col card-wrapper" data-actor="Prem Nazir">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/Prem_Nazir.avif" alt="Prem Nazir">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">Prem Nazir</h4>
+                    </div>
+                </div>
+            </div>      
+
+            <div class="col card-wrapper" data-actor="Vineeth Sreenivasan">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/Vineeth_Sreenivasan.jpg" alt="Vineeth Sreenivasan">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">Vineeth Sreenivasan</h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col-12 mx-auto">
+                        <form action="/upload" class="dropzone" id="dropzone">
+                            <div class="dz-message needsclick">
+                                <img src="./images/upload.png" width="50" height="50"><br>
+                                <span class="note needsclick">Drop files here or click to upload</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-3 mx-auto">
+                        <button id="submitBtn" type="button" class="btn btn-success">Classify</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-sm-8 error" id="error" style="display: none;">
+                <p>Can't classify image. Classifier was not able to detect face and two eyes properly.</p>    
+            </div>
+
+            <div class="col-sm-4" id="resultHolder"></div>
+            <div class="col-sm-4" id="divClassTable">
+                <table id="classTable" class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Actor</th>
+                            <th>Probability Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Dulquer Salmaan</td>
+                            <td id="score_Dulquer_Salmaan"></td>
+                        </tr>
+                        <tr>
+                            <td>Fahad Faasil</td>
+                            <td id="score_Fahad_Faasil"></td>
+                        </tr>
+                        <tr>
+                            <td>Mohanlal</td>
+                            <td id="score_Mohanlal"></td>
+                        </tr>
+                        <tr>
+                            <td>Prem Nazir</td>
+                            <td id="score_Prem_Nazir"></td>
+                        </tr>
+                        <tr>
+                            <td>Vineeth Sreenivasan</td>
+                            <td id="score_Vineeth_Sreenivasan"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="./dropzone.min.js"></script>
+<script src="./app.js"></script>
+
+</html>

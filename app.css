@@ -1,0 +1,101 @@
+/* Adjust card layout for better spacing */
+.card-wrapper {
+  margin: 5% 0;
+}
+
+/* Responsive circular images */
+.custom-circle-image {
+  width: 10vw; /* Using vw for responsiveness */
+  height: 10vw;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ensure images fit well inside the circle */
+.custom-circle-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Card title styling */
+.card-title {
+  letter-spacing: 1.1px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Card text styling */
+.card-text {
+  font-family: "Merriweather", serif; /* Ensure fallback font */
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+/* Dropzone upload box */
+.dropzone {
+  border-style: dashed;
+  border-width: 2px;
+  border-color: #007bff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* Error message styling */
+.error {
+  font-family: "Merriweather", serif;
+  font-size: 20px;
+  color: red;
+  text-align: center;
+  font-weight: bold;
+  display: none; /* Initially hidden */
+}
+
+/* Table styling */
+#classTable {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#classTable td, #classTable th {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+/* Header Styling */
+#classTable th {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 18px;
+}
+
+/* Hover effect on table rows */
+#classTable tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .custom-circle-image {
+      width: 15vw;
+      height: 15vw;
+  }
+
+  .card-title {
+      font-size: 16px;
+  }
+
+  .dropzone {
+      padding: 10px;
+  }
+
+  .error {
+      font-size: 18px;
+  }
+}
